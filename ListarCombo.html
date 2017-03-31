@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+var arreglo = [];
+document.getElementById("fruta").innerHTML = arreglo;
+
+function myfunction(){
+        var combo = document.getElementById('tipo');
+        arreglo.push(combo.value);
+        document.getElementById("fruta").innerHTML = arreglo;
+}
+</script>
+</head>
+<body>
+
+    
+        <div>
+            <label>T&iacute;tulo:</label>
+        </div>
+        <div ng-app="">
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" ng-model="name" onchange="myfunction()">
+                <option value="1">Tipo 1</option>
+                <option value="2">Tipo 2</option>
+                <option value="3">Tipo 3</option>
+            </select>
+			<p>{{name}}</p>
+            <p id="fruta"></p>
+           
+        </div>
+   
+
+</body>
+</html>
